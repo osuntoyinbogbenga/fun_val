@@ -1,2 +1,5 @@
-# fun_val
-i saw something similar online and decided to try it.
+# Valentine 💖
+
+A playful Valentine page where the "No" button runs away 😌
+
+Deployed with Vercel.

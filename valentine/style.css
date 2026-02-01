@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -61,12 +63,19 @@ button:hover {
   background: #f1f1f1;
   color: #333;
   position: absolute;
+  transition: none; /* instant movement */
 }
 
 .hint {
   margin-top: 18px;
   font-size: 13px;
   color: #777;
+}
+
+.credit {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 6px;
 }
 
 /* YES SCREEN */
@@ -79,11 +88,14 @@ button:hover {
   justify-content: center;
   text-align: center;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
 .big-emoji {
   font-size: 90px;
   animation: float 2s ease-in-out infinite;
+  margin-bottom: 20px;
 }
 
 .success h1 {
@@ -91,7 +103,35 @@ button:hover {
   margin: 12px 0;
 }
 
+.success p.hint {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.success button.yes {
+  background: #ff4d6d;
+  color: white;
+  box-shadow: 0 8px 20px rgba(255,77,109,0.4);
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Floating hearts animation */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: rise 3s linear forwards;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-400px) scale(1.5); opacity: 0; }
 }
